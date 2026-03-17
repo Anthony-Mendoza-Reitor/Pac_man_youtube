@@ -1,90 +1,28 @@
-🕹️ PAC-MAN ARCADE: HTML5 Canvas Edition
-A high-fidelity, retro-futuristic recreation of the classic 1980s arcade phenomenon. Built entirely with HTML5, CSS3, and Vanilla JavaScript, this project features a custom physics engine, pathfinding AI, and a synthesized Web Audio API system.
+# 🕹️ PAC-MAN ARCADE: Edición Neón Retro-Futurista
 
-✨ Features
-🎨 Retro-Futuristic UI
-Virtual Arcade Cabinet: A CSS-styled frame featuring a pulsing "Marquee" neon sign and a CRT scanline overlay.
+Una recreación de alta fidelidad del fenómeno clásico de los 80, construida desde cero con **HTML5 Canvas, CSS3 y Vanilla JavaScript**. Este proyecto combina una estética de "gabinete real" con un motor de físicas personalizado, IA de búsqueda de caminos y audio sintetizado.
 
-Dynamic Particle System: Real-time bursts and floating score text using a custom class-based particle engine.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
 
-Responsive Controls: Support for Keyboard (WASD/Arrows), Touch Swipes, and an interactive Virtual Joystick.
+---
 
-🧠 Intelligent Ghost AI
-The game implements a custom A (A-Star) Pathfinding Algorithm* with distinct "personalities" for the ghosts:
+## ✨ Características Principales
 
-Blinky (Red): Direct pursuit.
+### 🎨 Estética de Gabinete Arcade
+* **Marquesina Animada:** Un letrero superior con efectos de pulso neón y luces cíclicas.
+* **Interfaz de Puntuación:** Panel dedicado para *High Score*, nivel actual y contador de vidas estilo retro.
+* **Efecto CRT:** Superposición de líneas de escaneo (scanlines) para imitar los monitores de tubo antiguos.
+* **Sistema de Partículas:** Explosiones visuales al comer fantasmas o píldoras de poder.
 
-Pinky (Pink): Ambush logic (targets tiles ahead of the player).
+### 🧠 Inteligencia Artificial Avanzada (A*)
+Los fantasmas no se mueven al azar; utilizan el algoritmo **A-Star (A*)** con comportamientos únicos:
+* **Blinky (Rojo):** Persecución directa y agresiva.
+* **Pinky (Rosa):** Intenta emboscar al jugador apuntando a celdas por delante de su dirección.
+* **Inky (Cian):** Comportamiento errático y flanqueo.
+* **Clyde (Naranja):** Persigue al jugador pero huye a su esquina si se acerca demasiado.
+* **Estados Complejos:** Manejo de estados de "Hogar", "Saliendo", "Asustado" y "Regresando" (solo ojos) tras ser devorados.
 
-Inky (Cyan): Erratic/Unpredictable movement.
-
-Clyde (Orange): Pursues until close, then retreats to his corner.
-
-Smart State Machine: Ghosts transition seamlessly between HOUSE, EXITING, NORMAL, FRIGHTENED, and RETURNING (eyes only) states.
-
-🔊 Procedural Web Audio
-No MP3 files required! All sounds are synthesized in real-time using the Web Audio API:
-
-Square-wave "Waka-waka" dot eating.
-
-Sawtooth-wave death sequences.
-
-Triangle-wave level-clear melodies.
-
-Dynamic background "Siren" that pulses during gameplay.
-
-🗺️ Technical Map Engine
-Tile-Locked Movement: Prevents Pac-Man from "sticking" to corners by enforcing pixel-perfect grid alignment.
-
-Tunnel Logic: Seamless horizontal wrapping at row 11.
-
-Procedural Maze Rendering: A sophisticated wall-drawing algorithm that calculates convex and concave corners to create smooth, connected neon borders.
-
-🎮 How to Play
-Objective: Eat all dots (.) and Power Pellets (o) to clear the level.
-
-Controls:
-
-PC: Use Arrow Keys or WASD.
-
-Mobile: Swipe on the screen or use the Virtual Joystick at the bottom.
-
-Scoring:
-
-Dots: 10 pts
-
-Power Pellets: 50 pts
-
-Ghosts: 200, 400, 800, 1600 pts (Combo)
-
-Fruits: 🍒(100) → 🍓(300) → 🍊(500) → 🍋(700) → 🍎(1000)
-
-🚀 Installation & Setup
-Since this project is built with Vanilla JS, no build tools are required.
-
-Clone the repository:
-
-Bash
-git clone https://github.com/yourusername/pacman-arcade.git
-Open index.html in any modern web browser.
-
-Note: Most browsers require a user interaction (like clicking "Play") to enable the Web Audio API.
-
-🛠️ Technical Details
-Grid Size: 21 Columns × 23 Rows.
-
-Resolution: 420px × 460px (Canvas).
-
-Frame Rate: Optimized for 60FPS using requestAnimationFrame.
-
-Font: Orbitron via Google Fonts.
-
-📜 License
-Distributed under the MIT License. See LICENSE for more information.
-
-© 1980 NAMCO (Original Concept) | 2024 Re-imagined by Anthony Mendoza
-
-Sería genial si pudieras:
-¿Te gustaría que añadiera una sección de "Roadmap" con futuras mejoras?
-
-¿O quizás una tabla comparando las dificultades de cada nivel?
+### 🔊 Audio Sintetizado (Web Audio API)
+Sin archivos MP3 externos. Todo el sonido
